@@ -1,0 +1,205 @@
+%!TEX program = xelatex
+\documentclass[verdana]{nwo}
+
+\usepackage{mdframed}
+
+\setcounter{section}{-1}
+
+\topic{Example:\\ Grant application form 2016}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{mdframed}
+\begin{center}
+\bfseries\itshape
+By submitting this document, I declare that I satisfy the nationally and internationally accepted standards for scientific conduct as stated in the Netherlands Code of Conduct for Scientific Practice 2012 (Association of Universities in the Netherlands).
+\end{center}
+\end{mdframed}
+
+...
+
+% ==============================================================================
+\section{Basic details}
+% ==============================================================================
+
+...
+
+\tableofcontents
+
+
+% ==============================================================================
+\clearpage
+\section{TeX-source}
+% ==============================================================================
+
+% ==============================================================================
+\subsection{Introduction}
+% ==============================================================================
+
+The NWO-layout for LaTeX is specified in \texttt{nwo.cls}. It depends on the logo \texttt{nwo.pdf} to be placed in the same folder. It is basically a customized \textit{article} can be be used in that way.
+
+Specify the name of the proposal by specifying \verb|\topic{...}| in the preamble. This document has been created using:
+
+\begin{mdframed}[backgroundcolor=black!10]
+\vspace*{1em}
+\begin{verbatim}
+%!TEX program = xelatex
+\documentclass[verdana]{nwo}
+
+\usepackage{mdframed}
+
+\setcounter{section}{-1}
+
+\topic{Example:\\ Grant application form 2016}
+
+\begin{document}
+
+...
+
+\end{document}
+\end{verbatim}
+\vspace*{1em}
+\end{mdframed}
+
+% ==============================================================================
+\subsection{Sections}
+% ==============================================================================
+
+Sections, in gray, are created by \verb|\section{...}|. The sub-sections, etc.\ are bold-face. This follows all the default LaTeX-commands.
+
+% ==============================================================================
+\subsection{Schedule and deliverables}
+% ==============================================================================
+
+A Gantt-chart can included as an image (using \verb|\includegraphics{...}|). Alternatively, a LaTeX-table can be used.
+
+\begin{mdframed}[backgroundcolor=black!10]
+\vspace*{1em}
+\begin{verbatim}
+\newcommand{\X}{\cellcolor{Maroon}}
+\small
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+\multicolumn{2}{|l|}{} & Q1 & Q2 & Q3 & Q4 & Q5 & Q6 & Q7 & Q8 \\ \hline
+WP 1.1 & Task A        & \X &    &    &    &    &    &    &    \\ \hline
+WP 1.2 & Task B        &    & \X &    &    &    &    &    &    \\ \hline
+...    &               &    &    &    &    &    &    &    &    \\ \hline
+\end{tabular}
+\normalsize
+\end{verbatim}
+\vspace*{1em}
+\end{mdframed}
+
+% ==============================================================================
+\subsection{Text-box}
+% ==============================================================================
+
+A text-box is created using \verb|\begin{mdframed}...\end{mdframed}|. For example:
+
+\begin{mdframed}[backgroundcolor=black!10]
+\vspace*{1em}
+\begin{verbatim}
+\begin{mdframed}[backgroundcolor=black!10]
+...
+\end{mdframed}
+\end{verbatim}
+\vspace*{1em}
+\end{mdframed}
+
+% ==============================================================================
+\subsection{Citations}
+% ==============================================================================
+
+A citation is included using \verb|\cite{...}|, \verb|\citep{...}|, and  \verb|\citet{...}|. The bibliography is included by \verb|\bibliography{...}|
+
+\begin{mdframed}[backgroundcolor=black!10]
+\vspace*{1em}
+\begin{verbatim}
+\citet{DeGeus2015b} have found that ...
+
+\bibliography{library}
+\end{verbatim}
+\vspace*{1em}
+\end{mdframed}
+
+% ==============================================================================
+\clearpage
+\section{Example}
+% ==============================================================================
+
+% ==============================================================================
+\subsection{Introduction}
+% ==============================================================================
+
+The NWO-layout for LaTeX is specified in \texttt{nwo.cls}. It depends on the logo \texttt{nwo.pdf} to be placed in the same folder. It is basically a customized \textit{article} can be be used in that way.
+
+Specify the name of the proposal by specifying \verb|\topic{...}| in the preamble. For this document, the following has been used:
+
+\begin{mdframed}[backgroundcolor=black!10]
+\vspace*{1em}
+\begin{verbatim}
+%!TEX program = xelatex
+\documentclass[verdana]{nwo}
+
+\usepackage{mdframed}
+
+\setcounter{section}{-1}
+
+\topic{Example:\\ Grant application form 2016}
+
+\begin{document}
+
+...
+
+\end{document}
+\end{verbatim}
+\vspace*{1em}
+\end{mdframed}
+
+
+% ==============================================================================
+\subsection{Sections}
+% ==============================================================================
+
+Sections, in gray, are created by \verb|\section{...}|. The sub-sections, etc.\ are bold-face. This follows all the default LaTeX-commands.
+
+% ==============================================================================
+\subsection{Schedule and deliverables}
+% ==============================================================================
+
+A Gantt-chart can included as an image (using \verb|\includegraphics{...}|). Alternatively, a LaTeX-table can be used. For example:
+
+\newcommand{\X}{\cellcolor{Maroon}}
+\small
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+\multicolumn{2}{|l|}{} & Q1 & Q2 & Q3 & Q4 & Q5 & Q6 & Q7 & Q8 \\ \hline
+WP 1.1 & Task A        & \X &    &    &    &    &    &    &    \\ \hline
+WP 1.2 & Task B        &    & \X &    &    &    &    &    &    \\ \hline
+...    &               &    &    &    &    &    &    &    &    \\ \hline
+\end{tabular}
+\normalsize
+
+% ==============================================================================
+\subsection{Text-box}
+% ==============================================================================
+
+A text-box is created using \verb|\begin{mdframed}...\end{mdframed}|.
+
+
+% ==============================================================================
+\subsection{Citations}
+% ==============================================================================
+
+A citation is included using \verb|\cite{...}|, \verb|\citep{...}|, and  \verb|\citet{...}|. The bibliography is included by \verb|\bibliography{...}|. For example:
+
+\citet{DeGeus2015b} have found that ...
+
+\bibliography{library}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
